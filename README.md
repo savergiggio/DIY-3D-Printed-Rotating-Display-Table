@@ -4,7 +4,7 @@ Welcome to the DIY 3D Printed Rotating Display Table project! This guide will ta
 
 <div align="center">
       <a href="https://youtube.com/shorts/n3ozKAmMvuE?si=SYdgCeqgDrofPkmG">
-         <img src="https://img.youtube.com/shorts/n3ozKAmMvuE?si=SYdgCeqgDrofPkmG" 
+         <img src="https://img.youtube.com/shorts/n3ozKAmMvuE?si=SYdgCeqgDrofPkmG/0.jpg" 
            style="width:75%;">
       </a>
 </div>
