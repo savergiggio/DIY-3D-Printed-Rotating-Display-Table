@@ -3,8 +3,8 @@
 Welcome to the DIY 3D Printed Rotating Display Table project! This guide will take you through the steps to create your very own rotating display table, perfect for showcasing 3D printed models, collectibles, or products. We'll cover everything from gathering supplies, 3D printing parts, programming the Arduino, and assembling the final product. Let's get started!
 
 <div align="center">
-      <a href="https://youtube.com/shorts/RDCSLrC_DVk">
-         <img src="https://img.youtube.com/shorts/RDCSLrC_DVk/0.jpg" 
+      <a href="https://youtube.com/RDCSLrC_DVk">
+         <img src="https://img.youtube.com/RDCSLrC_DVk/0.jpg" 
            style="width:75%;">
       </a>
 </div>
