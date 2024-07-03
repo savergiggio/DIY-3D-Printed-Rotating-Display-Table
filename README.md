@@ -39,7 +39,6 @@ First, 3D print all necessary components using your modeled parts. Ensure your p
 - **Layer Height**: 0.2 mm
 - **Wall Thickness**: 1.2 mm
 - **Infill Density**: 20-30%
-- **Supports**: Enable if necessary
 
 ### Instructions
 
@@ -48,7 +47,6 @@ First, 3D print all necessary components using your modeled parts. Ensure your p
 3. **Configure Print Settings**: Adjust settings for quality and strength.
 4. **Slice the Model**: Generate the G-code for your 3D printer.
 5. **Start Printing**: Print each component, monitoring the first few layers for adhesion.
-6. **Post-Processing**: Remove supports and sand rough edges if needed.
 
 ## Step 2: Upload the Arduino Code
 
@@ -57,62 +55,7 @@ Next, program the Arduino Nano to control the stepper motor. Follow these steps:
 1. **Install Arduino IDE**: Download from [here](https://www.arduino.cc/en/software).
 2. **Connect the Arduino Nano**: Use a USB cable to connect to your computer.
 3. **Open the Arduino IDE**: Select "Arduino Nano" as the board and the correct port.
-4. **Enter the Code**: Copy the code below into a new sketch:
-
-    ```cpp
-    // Define stepper motor control pins
-    #define IN1 9
-    #define IN2 10
-    #define IN3 11
-    #define IN4 12
-
-    // Define the steps in the sequence
-    int stepSequence[8][4] = {
-      {1, 0, 0, 0},
-      {1, 1, 0, 0},
-      {0, 1, 0, 0},
-      {0, 1, 1, 0},
-      {0, 0, 1, 0},
-      {0, 0, 1, 1},
-      {0, 0, 0, 1},
-      {1, 0, 0, 1}
-    };
-
-    // Variables for direction and speed
-    bool direction = true; // false for anti-clockwise, true for clockwise
-    int speed = 5; // Speed control (1 to 10), higher value means slower speed
-
-    void setup() {
-      // Set control pins as outputs
-      pinMode(IN1, OUTPUT);
-      pinMode(IN2, OUTPUT);
-      pinMode(IN3, OUTPUT);
-      pinMode(IN4, OUTPUT);
-    }
-
-    void loop() {
-      // Iterate through the step sequence based on direction
-      if (direction) {
-        for (int i = 0; i < 8; i++) {
-          setStep(stepSequence[i][0], stepSequence[i][1], stepSequence[i][2], stepSequence[i][3]);
-          delay(speed); // Control speed
-        }
-      } else {
-        for (int i = 7; i >= 0; i--) {
-          setStep(stepSequence[i][0], stepSequence[i][1], stepSequence[i][2], stepSequence[i][3]);
-          delay(speed); // Control speed
-        }
-      }
-    }
-
-    void setStep(int a, int b, int c, int d) {
-      digitalWrite(IN1, a);
-      digitalWrite(IN2, b);
-      digitalWrite(IN3, c);
-      digitalWrite(IN4, d);
-    }
-    ```
-
+4. **Enter the Code**: Download the code and open into a new sketch:
 5. **Upload the Code**: Verify and upload the code to the Arduino Nano.
 
 ## Step 3: Assembling the Display Table
@@ -136,9 +79,7 @@ Finally, assemble the components to complete your rotating display table.
 8. **Finalize the Assembly**: Secure all parts and reinforce with glue if necessary.
 
 ### Tips
-- **Cable Management**: Keep wires organized to avoid tangling.
-- **Lubrication**: Use lubrication if the platform feels stiff.
-- **Ventilation**: Ensure adequate ventilation to prevent overheating.
+- **Cable Management**: Keep wires organized to avoid tangling, refer to images.
 
 Congratulations! You've completed your DIY 3D Printed Rotating Display Table. Enjoy showcasing your creations with smooth, controlled rotations!
 
