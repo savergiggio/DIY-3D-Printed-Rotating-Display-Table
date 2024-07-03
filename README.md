@@ -58,6 +58,16 @@ Next, program the Arduino Nano to control the stepper motor. Follow these steps:
 4. **Enter the Code**: Download the code and open into a new sketch:
 5. **Upload the Code**: Verify and upload the code to the Arduino Nano.
 
+### CODE Explanation:
+- **Pin Definitions**: `IN1` to `IN4` are defined as the control pins connected to the stepper motor driver.
+- **Step Sequence**: `stepSequence` is a 2D array defining the sequence of steps to rotate the stepper motor. Each sub-array represents one step with four control signals.
+- **Direction and Speed Variables**: `direction` determines the rotation direction, and `speed` controls the speed of the motor.
+- **Setup Function**: Sets the control pins as outputs.
+- **Loop Function**: Runs continuously, controlling the motor rotation based on the direction. It iterates through the `stepSequence` array either forwards or backwards.
+- **setStep Function**: Sets the motor control pins to the specified values for each step.
+
+This commented code should help you understand how each part functions and how it controls the stepper motor for your rotating display table.
+
 ## Step 3: Assembling the Display Table
 
 Finally, assemble the components to complete your rotating display table.
@@ -77,6 +87,7 @@ Finally, assemble the components to complete your rotating display table.
 6. **Assemble the Rotating Platform**: Attach to the motor shaft, ensuring a tight fit.
 7. **Test the Setup**: Power on and verify smooth operation. Adjust code if needed.
 8. **Finalize the Assembly**: Secure all parts and reinforce with glue if necessary.
+
 
 ### Tips
 - **Cable Management**: Keep wires organized to avoid tangling, refer to images.
